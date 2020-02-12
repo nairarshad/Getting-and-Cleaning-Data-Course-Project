@@ -105,4 +105,4 @@ all.data.stat.tidy <- all.data.stat.tbl %>%
   rename_at(vars(-c("ActivityLabel", "Subject")),function(x) paste0("MEAN_",x))
 
 # Export the tidy table for upload
-write.csv(all.data.stat.tidy, "tidy_data.txt", row.names=FALSE)
+write.table(all.data.stat.tidy, "tidy_data.txt", sep = ",", row.names = FALSE)
